@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pay-->
+        <scene sceneID="bzj-EU-Foq">
+            <objects>
+                <viewController storyboardIdentifier="PaymentGatewayVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rVf-u7-2cQ" customClass="PaymentGatewayVC" customModule="Payment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WiX-gp-kkF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qYg-2H-M0q">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" systemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xlg-Po-EQ1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qYg-2H-M0q" firstAttribute="centerY" secondItem="xlg-Po-EQ1" secondAttribute="centerY" id="MpI-Ni-mzz"/>
+                            <constraint firstItem="qYg-2H-M0q" firstAttribute="centerX" secondItem="xlg-Po-EQ1" secondAttribute="centerX" id="VgJ-M0-eRo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pay" id="Hiy-Lt-WPZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="L8n-ch-IMn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressView" destination="qYg-2H-M0q" id="Dy8-dg-qRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gep-KY-6Sx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="138.61607142857142"/>
+        </scene>
+        <!--Payment Failed-->
+        <scene sceneID="G3c-kQ-0Qj">
+            <objects>
+                <viewController storyboardIdentifier="PaymentFailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aN6-Hw-HtD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dzO-Wz-SqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, payments are not available on Jailbroken devices." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ3-Yi-bTI" customClass="BaseLabel" customModule="Common">
+                                <rect key="frame" x="15" y="432.5" width="384" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="shapeAdapter" value="HEADLINE"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SBb-LU-oJ5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eQ3-Yi-bTI" firstAttribute="leading" secondItem="SBb-LU-oJ5" secondAttribute="leading" constant="15" id="TRu-bZ-Tlh"/>
+                            <constraint firstItem="SBb-LU-oJ5" firstAttribute="trailing" secondItem="eQ3-Yi-bTI" secondAttribute="trailing" constant="15" id="paP-cf-Hwi"/>
+                            <constraint firstItem="eQ3-Yi-bTI" firstAttribute="centerY" secondItem="SBb-LU-oJ5" secondAttribute="centerY" id="uPy-mo-xlZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Payment Failed" id="Hcg-lN-wHs">
+                        <barButtonItem key="backBarButtonItem" title=" " id="4bL-Pp-mdm"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NoH-iW-5dC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
